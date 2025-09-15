@@ -1,7 +1,7 @@
 {
-  "name": "@malberee/heroui-native",
+  "name": "merlo-ui",
   "version": "1.1.12",
-  "description": "HeroUI for React Native",
+  "description": "Beautiful React Native UI library",
   "main": "./lib/module/index.js",
   "types": "./lib/module/index.d.ts",
   "source": "./src/index.ts",
@@ -27,7 +27,7 @@
     "lib"
   ],
   "scripts": {
-    "example": "yarn workspace @malberee/heroui-native-example",
+    "example": "yarn workspace merlo-ui-example",
     "test": "jest",
     "typecheck": "tsc --noEmit",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
@@ -40,20 +40,18 @@
     "react-native",
     "ios",
     "android",
-    "next ui",
-    "hero ui",
     "react native ui"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Malberee/heroui-native.git"
+    "url": "git+https://github.com/Malberee/merlo-ui.git"
   },
   "author": "Malberee <pavellyalkov45@gmail.com> (https://github.com/Malberee)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Malberee/heroui-native/issues"
+    "url": "https://github.com/Malberee/merlo-ui/issues"
   },
-  "homepage": "https://github.com/Malberee/heroui-native#readme",
+  "homepage": "https://github.com/Malberee/merlo-ui#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
     "access": "public"

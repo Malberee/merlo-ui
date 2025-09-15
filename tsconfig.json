@@ -2,7 +2,7 @@
   "compilerOptions": {
     "rootDir": ".",
     "paths": {
-      "@malberee/heroui-native": ["./src/index"],
+      "merlo-ui": ["./src/index"],
       "@/*": ["./src/*"]
     },
     "allowUnreachableCode": false,

@@ -1,7 +1,7 @@
 import { useProviderContext } from '@/core'
 import {
   type PropGetter,
-  type RNHeroUIProps,
+  type RNMerloUIProps,
   mapPropsVariants,
 } from '@/core/system-rsc'
 import { type SlotsToClasses } from '@/core/theme'
@@ -30,7 +30,7 @@ import {
 
 import { useProgressBar as useAriaProgress } from './use-progress-bar'
 
-export interface Props extends RNHeroUIProps {
+export interface Props extends RNMerloUIProps {
   /**
    * Ref to the React Native component.
    */

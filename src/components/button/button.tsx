@@ -48,6 +48,6 @@ const Button = forwardRef<View, ButtonProps>((props, ref) => {
   )
 })
 
-Button.displayName = 'HeroUI.Button'
+Button.displayName = 'MerloUI.Button'
 
 export default Button

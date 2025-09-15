@@ -1,7 +1,7 @@
 import { useProviderContext } from '@/core'
 import {
   type PropGetter,
-  type RNHeroUIProps,
+  type RNMerloUIProps,
   mapPropsVariants,
 } from '@/core/system-rsc'
 import {
@@ -23,7 +23,7 @@ import type { TextInput, TextInputProps, View } from 'react-native'
 import { useFormControl } from './use-form-control'
 
 export interface Props<T extends TextInput = TextInput>
-  extends Omit<RNHeroUIProps<typeof TextInput>, keyof InputVariantProps> {
+  extends Omit<RNMerloUIProps<typeof TextInput>, keyof InputVariantProps> {
   /**
    * Ref to the React Native component.
    */

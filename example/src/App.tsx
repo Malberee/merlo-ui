@@ -1,4 +1,4 @@
-import { Button, CircularProgress } from '@malberee/heroui-native'
+import { Button, CircularProgress } from 'merlo-ui'
 import { useState } from 'react'
 import { StyleSheet, View } from 'react-native'
 

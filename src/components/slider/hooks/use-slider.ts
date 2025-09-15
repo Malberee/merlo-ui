@@ -1,7 +1,7 @@
 import { useProviderContext } from '@/core'
 import {
   type PropGetter,
-  type RNHeroUIProps,
+  type RNMerloUIProps,
   mapPropsVariants,
 } from '@/core/system-rsc'
 import {
@@ -34,7 +34,7 @@ export type SliderStepMark = {
 
 export type SliderRenderThumbProps = ViewProps & { index?: number }
 
-interface Props extends RNHeroUIProps {
+interface Props extends RNMerloUIProps {
   /**
    * Ref to the React Native component.
    */

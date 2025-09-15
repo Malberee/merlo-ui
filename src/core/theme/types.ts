@@ -97,13 +97,13 @@ export type ConfigTheme = {
 export type ConfigThemes = Record<string, ConfigTheme>
 
 /**
- * The HeroUI config.
+ * The MerloUI config.
  * @see https://www.heroui.com/docs/customization/customize-theme
  */
-export type HeroUIPluginConfig = {
+export type MerloUIPluginConfig = {
   /**
    * The prefix for the css variables.
-   * @default "heroui"
+   * @default "merloui"
    */
   prefix?: string
   /**

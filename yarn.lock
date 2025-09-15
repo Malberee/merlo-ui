@@ -2754,109 +2754,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@malberee/heroui-native-example@workspace:example":
-  version: 0.0.0-use.local
-  resolution: "@malberee/heroui-native-example@workspace:example"
-  dependencies:
-    "@babel/core": ^7.20.0
-    "@expo/metro-runtime": ~5.0.4
-    babel-plugin-module-resolver: ^5.0.2
-    expo: ~53.0.9
-    expo-status-bar: ~2.2.3
-    nativewind: ^4.1.23
-    react: 19.0.0
-    react-dom: 19.0.0
-    react-native: 0.79.2
-    react-native-builder-bob: ^0.40.11
-    react-native-monorepo-config: ^0.1.9
-    react-native-reanimated: ~3.17.4
-    react-native-safe-area-context: ^5.4.0
-    react-native-svg: 15.11.2
-    react-native-web: ~0.20.0
-    tailwindcss: ^3.4.17
-  languageName: unknown
-  linkType: soft
-
-"@malberee/heroui-native@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "@malberee/heroui-native@workspace:."
-  dependencies:
-    "@commitlint/config-conventional": ^19.6.0
-    "@eslint/compat": ^1.2.7
-    "@eslint/eslintrc": ^3.3.0
-    "@eslint/js": ^9.22.0
-    "@evilmartians/lefthook": ^1.5.0
-    "@react-aria/label": ^3.7.18
-    "@react-aria/progress": ^3.4.23
-    "@react-aria/utils": ^3.22.0
-    "@react-native-aria/button": ^0.2.10
-    "@react-native-aria/checkbox": ^0.2.10
-    "@react-native-aria/radio": ^0.2.13
-    "@react-native-aria/slider": ^0.2.12
-    "@react-native-aria/switch": ^0.2.4
-    "@react-native/babel-preset": 0.78.2
-    "@react-native/eslint-config": ^0.78.0
-    "@react-stately/slider": ^3.6.4
-    "@react-stately/toggle": ^3.8.4
-    "@react-types/checkbox": ^3.9.4
-    "@react-types/progress": ^3.5.12
-    "@react-types/textfield": ^3.12.2
-    "@release-it/conventional-changelog": ^9.0.2
-    "@testing-library/react-native": ^13.2.0
-    "@trivago/prettier-plugin-sort-imports": ^5.2.2
-    "@types/color": ^4.2.0
-    "@types/jest": ^29.5.5
-    "@types/lodash.foreach": ^4.5.9
-    "@types/lodash.get": ^4.4.9
-    "@types/lodash.kebabcase": ^4.1.9
-    "@types/lodash.mapkeys": ^4.6.9
-    "@types/lodash.omit": ^4.5.9
-    "@types/react": ^18.2.44
-    "@types/react-test-renderer": 19.0.0
-    babel-plugin-module-resolver: ^5.0.2
-    clsx: ^2.1.1
-    color: ^5.0.0
-    color2k: ^2.0.3
-    commitlint: ^19.6.1
-    deepmerge: ^4.3.1
-    del-cli: ^5.1.0
-    eslint: ^9.22.0
-    eslint-config-prettier: ^10.1.1
-    eslint-plugin-prettier: ^5.2.3
-    eslint-plugin-unused-imports: ^4.1.4
-    flat: ^6.0.1
-    jest: ^29.7.0
-    lodash.foreach: ^4.5.0
-    lodash.get: ^4.4.2
-    lodash.kebabcase: ^4.1.1
-    lodash.mapkeys: ^4.6.0
-    lodash.omit: ^4.5.0
-    nativewind: ^4.1.23
-    prettier: ^3.0.3
-    prettier-plugin-tailwindcss: ^0.6.11
-    react: 19.0.0
-    react-dom: ^19.1.0
-    react-native: 0.79.2
-    react-native-builder-bob: ^0.40.11
-    react-native-reanimated: 3.16.2
-    react-native-svg: ^15.12.0
-    react-test-renderer: 19.0.0
-    release-it: ^17.10.0
-    tailwind-merge: 2.5.4
-    tailwind-variants: ^1.0.0
-    tailwindcss: ^3.4.17
-    tsc-alias: ^1.8.16
-    typescript: ^5.8.3
-  peerDependencies:
-    nativewind: ">=4"
-    react: "*"
-    react-native: "*"
-    react-native-reanimated: ">=3"
-    react-native-svg: ">=15"
-    tailwindcss: ">=3"
-  languageName: unknown
-  linkType: soft
-
 "@nicolo-ribaudo/eslint-scope-5-internals@npm:5.1.1-v1":
   version: 5.1.1-v1
   resolution: "@nicolo-ribaudo/eslint-scope-5-internals@npm:5.1.1-v1"
@@ -10745,6 +10642,109 @@ __metadata:
   checksum: 7268db63ed5169466540b6fb947aec313200bcf6d40c5ab722c22e242f651994619bcd85601602972d3c85bd2cc45a358a4c61937e9f11a061919a1da569b0c2
   languageName: node
   linkType: hard
+
+"merlo-ui-example@workspace:example":
+  version: 0.0.0-use.local
+  resolution: "merlo-ui-example@workspace:example"
+  dependencies:
+    "@babel/core": ^7.20.0
+    "@expo/metro-runtime": ~5.0.4
+    babel-plugin-module-resolver: ^5.0.2
+    expo: ~53.0.9
+    expo-status-bar: ~2.2.3
+    nativewind: ^4.1.23
+    react: 19.0.0
+    react-dom: 19.0.0
+    react-native: 0.79.2
+    react-native-builder-bob: ^0.40.11
+    react-native-monorepo-config: ^0.1.9
+    react-native-reanimated: ~3.17.4
+    react-native-safe-area-context: ^5.4.0
+    react-native-svg: 15.11.2
+    react-native-web: ~0.20.0
+    tailwindcss: ^3.4.17
+  languageName: unknown
+  linkType: soft
+
+"merlo-ui@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "merlo-ui@workspace:."
+  dependencies:
+    "@commitlint/config-conventional": ^19.6.0
+    "@eslint/compat": ^1.2.7
+    "@eslint/eslintrc": ^3.3.0
+    "@eslint/js": ^9.22.0
+    "@evilmartians/lefthook": ^1.5.0
+    "@react-aria/label": ^3.7.18
+    "@react-aria/progress": ^3.4.23
+    "@react-aria/utils": ^3.22.0
+    "@react-native-aria/button": ^0.2.10
+    "@react-native-aria/checkbox": ^0.2.10
+    "@react-native-aria/radio": ^0.2.13
+    "@react-native-aria/slider": ^0.2.12
+    "@react-native-aria/switch": ^0.2.4
+    "@react-native/babel-preset": 0.78.2
+    "@react-native/eslint-config": ^0.78.0
+    "@react-stately/slider": ^3.6.4
+    "@react-stately/toggle": ^3.8.4
+    "@react-types/checkbox": ^3.9.4
+    "@react-types/progress": ^3.5.12
+    "@react-types/textfield": ^3.12.2
+    "@release-it/conventional-changelog": ^9.0.2
+    "@testing-library/react-native": ^13.2.0
+    "@trivago/prettier-plugin-sort-imports": ^5.2.2
+    "@types/color": ^4.2.0
+    "@types/jest": ^29.5.5
+    "@types/lodash.foreach": ^4.5.9
+    "@types/lodash.get": ^4.4.9
+    "@types/lodash.kebabcase": ^4.1.9
+    "@types/lodash.mapkeys": ^4.6.9
+    "@types/lodash.omit": ^4.5.9
+    "@types/react": ^18.2.44
+    "@types/react-test-renderer": 19.0.0
+    babel-plugin-module-resolver: ^5.0.2
+    clsx: ^2.1.1
+    color: ^5.0.0
+    color2k: ^2.0.3
+    commitlint: ^19.6.1
+    deepmerge: ^4.3.1
+    del-cli: ^5.1.0
+    eslint: ^9.22.0
+    eslint-config-prettier: ^10.1.1
+    eslint-plugin-prettier: ^5.2.3
+    eslint-plugin-unused-imports: ^4.1.4
+    flat: ^6.0.1
+    jest: ^29.7.0
+    lodash.foreach: ^4.5.0
+    lodash.get: ^4.4.2
+    lodash.kebabcase: ^4.1.1
+    lodash.mapkeys: ^4.6.0
+    lodash.omit: ^4.5.0
+    nativewind: ^4.1.23
+    prettier: ^3.0.3
+    prettier-plugin-tailwindcss: ^0.6.11
+    react: 19.0.0
+    react-dom: ^19.1.0
+    react-native: 0.79.2
+    react-native-builder-bob: ^0.40.11
+    react-native-reanimated: 3.16.2
+    react-native-svg: ^15.12.0
+    react-test-renderer: 19.0.0
+    release-it: ^17.10.0
+    tailwind-merge: 2.5.4
+    tailwind-variants: ^1.0.0
+    tailwindcss: ^3.4.17
+    tsc-alias: ^1.8.16
+    typescript: ^5.8.3
+  peerDependencies:
+    nativewind: ">=4"
+    react: "*"
+    react-native: "*"
+    react-native-reanimated: ">=3"
+    react-native-svg: ">=15"
+    tailwindcss: ">=3"
+  languageName: unknown
+  linkType: soft
 
 "metro-babel-transformer@npm:0.80.12":
   version: 0.80.12

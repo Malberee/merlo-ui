@@ -1,5 +1,5 @@
 import { useProviderContext } from '@/core'
-import type { PropGetter, RNHeroUIProps } from '@/core/system-rsc'
+import type { PropGetter, RNMerloUIProps } from '@/core/system-rsc'
 import {
   type RadioSlots,
   type RadioVariantProps,
@@ -22,7 +22,7 @@ import { View } from 'react-native'
 
 import { useRadioGroupContext } from '../radio-group-context'
 
-interface Props extends RNHeroUIProps {
+interface Props extends RNMerloUIProps {
   /**
    * Ref to the React Native component.
    */

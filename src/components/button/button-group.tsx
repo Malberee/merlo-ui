@@ -49,6 +49,6 @@ const ButtonGroup: FC<ButtonGroupProps> = (props) => {
   )
 }
 
-ButtonGroup.displayName = 'HeroUI.ButtonGroup'
+ButtonGroup.displayName = 'MerloUI.ButtonGroup'
 
 export default ButtonGroup

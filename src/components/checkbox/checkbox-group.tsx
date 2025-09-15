@@ -43,6 +43,6 @@ const CheckboxGroup = forwardRef<View, CheckboxGroupProps>((props, ref) => {
   )
 })
 
-CheckboxGroup.displayName = 'HeroUI.CheckboxGroup'
+CheckboxGroup.displayName = 'MerloUI.CheckboxGroup'
 
 export default CheckboxGroup

@@ -2,11 +2,11 @@ import { type FC, type ReactNode, useMemo } from 'react'
 
 import { ProviderContext, type ProviderContextProps } from './provider-context'
 
-export interface HeroUIProviderProps extends ProviderContextProps {
+export interface MerloUIProviderProps extends ProviderContextProps {
   children: ReactNode
 }
 
-export const HeroUIProvider: FC<HeroUIProviderProps> = ({
+export const MerloUIProvider: FC<MerloUIProviderProps> = ({
   children,
   disableRipple,
   disableAnimation,

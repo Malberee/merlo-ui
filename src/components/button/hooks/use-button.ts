@@ -1,7 +1,7 @@
 import { useRipple } from '@/components/ripple'
 import type { SpinnerProps } from '@/components/spinner'
 import { useProviderContext } from '@/core'
-import type { PropGetter, RNHeroUIProps } from '@/core/system-rsc'
+import type { PropGetter, RNMerloUIProps } from '@/core/system-rsc'
 import {
   type ButtonSlots,
   type ButtonVariantProps,
@@ -28,7 +28,7 @@ import type { LayoutChangeEvent, View } from 'react-native'
 
 import { useButtonGroupContext } from '../button-group-context'
 
-interface Props extends RNHeroUIProps {
+interface Props extends RNMerloUIProps {
   /**
    * Ref to the React Native component.
    */

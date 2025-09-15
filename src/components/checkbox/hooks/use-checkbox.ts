@@ -1,5 +1,5 @@
 import { useProviderContext } from '@/core'
-import type { PropGetter, RNHeroUIProps } from '@/core/system-rsc'
+import type { PropGetter, RNMerloUIProps } from '@/core/system-rsc'
 import {
   type CheckboxSlots,
   type CheckboxVariantProps,
@@ -34,7 +34,7 @@ export type CheckboxIconProps = {
   className: string
 }
 
-interface Props extends Omit<RNHeroUIProps, keyof CheckboxVariantProps> {
+interface Props extends Omit<RNMerloUIProps, keyof CheckboxVariantProps> {
   /**
    * Ref to the React Native component.
    */

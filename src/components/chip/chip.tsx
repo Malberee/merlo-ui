@@ -68,6 +68,6 @@ const Chip = forwardRef<View, ChipProps>((props, ref) => {
   )
 })
 
-Chip.displayName = 'HeroUI.Chip'
+Chip.displayName = 'MerloUI.Chip'
 
 export default Chip

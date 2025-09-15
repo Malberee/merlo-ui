@@ -63,6 +63,6 @@ const CircularProgress = forwardRef<View, CircularProgressProps>(
   }
 )
 
-CircularProgress.displayName = 'HeroUI.CircularProgress'
+CircularProgress.displayName = 'MerloUI.CircularProgress'
 
 export default CircularProgress

@@ -1,4 +1,4 @@
-const { heroui } = require('../src/plugin')
+const { merloui } = require('../src/plugin')
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -9,5 +9,5 @@ module.exports = {
     extend: {},
   },
   darkMode: 'class',
-  plugins: [heroui()],
+  plugins: [merloui()],
 }

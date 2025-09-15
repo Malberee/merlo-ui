@@ -85,6 +85,6 @@ const Spinner = forwardRef<View, SpinnerProps>((props, ref) => {
   )
 })
 
-Spinner.displayName = 'HeroUI.Spinner'
+Spinner.displayName = 'MerloUI.Spinner'
 
 export default Spinner

@@ -1,5 +1,5 @@
 import { useProviderContext } from '@/core'
-import type { PropGetter, RNHeroUIProps } from '@/core/system-rsc'
+import type { PropGetter, RNMerloUIProps } from '@/core/system-rsc'
 import {
   type CheckboxGroupSlots,
   type SlotsToClasses,
@@ -20,7 +20,7 @@ import type { View } from 'react-native'
 
 import type { CheckboxGroupProps, CheckboxProps } from '../index'
 
-interface Props extends RNHeroUIProps {
+interface Props extends RNMerloUIProps {
   /**
    * Ref to the React Native component.
    */

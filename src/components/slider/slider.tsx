@@ -74,6 +74,6 @@ const Slider = forwardRef<View, SliderProps>((props, ref) => {
   )
 })
 
-Slider.displayName = 'HeroUI.Slider'
+Slider.displayName = 'MerloUI.Slider'
 
 export default Slider

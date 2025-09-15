@@ -126,6 +126,6 @@ const Input = forwardRef<TextInput, InputProps>((props, ref) => {
   )
 })
 
-Input.displayName = 'HeroUI.Input'
+Input.displayName = 'MerloUI.Input'
 
 export default Input

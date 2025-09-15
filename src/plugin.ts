@@ -1,1 +1,1 @@
-export { heroui } from './core/theme/plugin'
+export { merloui } from './core/theme/plugin'

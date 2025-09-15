@@ -51,6 +51,6 @@ const Progress = forwardRef<View, ProgressProps>((props, ref) => {
   )
 })
 
-Progress.displayName = 'HeroUI.Progress'
+Progress.displayName = 'MerloUI.Progress'
 
 export default Progress

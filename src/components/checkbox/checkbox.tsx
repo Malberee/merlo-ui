@@ -47,6 +47,6 @@ const Checkbox = forwardRef<View, CheckboxProps>((props, ref) => {
   )
 })
 
-Checkbox.displayName = 'HeroUI.Checkbox'
+Checkbox.displayName = 'MerloUI.Checkbox'
 
 export default Checkbox
