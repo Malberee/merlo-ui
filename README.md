@@ -1,6 +1,6 @@
 # Merlo UI
 
-I'm just trying to replicate the design and some functionality of [MerloUI v2](https://github.com/heroui-inc/heroui) for React Native.
+I'm just trying to replicate the design and some functionality of [HeroUI v2](https://github.com/heroui-inc/heroui) for React Native.
 
 Here is a list of some of the components that have already been implemented:
 
