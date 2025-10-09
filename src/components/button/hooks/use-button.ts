@@ -8,7 +8,7 @@ import {
   type SlotsToClasses,
   button,
 } from '@/core/theme'
-import { useRippleColor } from '@/core/theme/hooks/useRippleColor'
+import { useRippleColor } from '@/core/theme/hooks/use-ripple-color'
 import type { ReactRef } from '@/utilities'
 import { chain, mergeProps } from '@react-aria/utils'
 import {

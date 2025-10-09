@@ -1,4 +1,4 @@
 export * from './context'
 export * from './refs'
-export * from './getLocale'
-export * from './useLayout'
+export * from './get-locale'
+export * from './use-layout'
