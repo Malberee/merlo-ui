@@ -119,9 +119,8 @@ export const useSwitch = (originalProps: UseSwitchProps = {}) => {
 
   const ariaSwitchProps = useMemo(() => {
     const ariaLabel =
-      otherProps['aria-label'] || typeof children === 'string'
-        ? (children as string)
-        : undefined
+      otherProps['aria-label'] ||
+      (typeof children === 'string' ? (children as string) : undefined)
 
     return {
       children,

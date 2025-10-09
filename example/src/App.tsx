@@ -1,4 +1,4 @@
-import { Slider } from 'merlo-ui'
+import { Switch } from 'merlo-ui'
 import { StyleSheet, View } from 'react-native'
 
 import '../global.css'
@@ -6,7 +6,7 @@ import '../global.css'
 export default function App() {
   return (
     <View style={styles.container}>
-      <Slider defaultValue={[10, 100]} label="Slider" />
+      <Switch />
     </View>
   )
 }
