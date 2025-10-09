@@ -76,13 +76,16 @@ export const useSliderThumb = (props: UseSliderThumbProps) => {
   const thumbStyles: any = {
     bottom: isVertical ? `${state.getThumbPercent(index) * 100}%` : undefined,
     left: !isVertical ? `${state.getThumbPercent(index) * 100}%` : '50%',
+    zIndex: state.focusedThumb === index ? 10 : 1,
   }
 
   const getThumbProps: PropGetter = (props = {}) => {
     return {
       role: 'slider',
       ref: inputRef,
-      ...mergeProps(thumbProps, otherProps),
+      ...mergeProps(thumbProps, otherProps, {
+        onResponderGrant: () => state.setFocusedThumb(index),
+      }),
       className,
       style: thumbStyles,
       ...props,

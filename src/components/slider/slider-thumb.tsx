@@ -15,7 +15,7 @@ const SliderThumb = forwardRef<View, SliderThumbProps>((props, ref) => {
   const thumbProps = {
     ...getThumbProps(),
     index,
-    children: <View className="absolute size-12 bg-transparent" />,
+    children: <View className="pointer-events-auto absolute z-10 size-12" />,
   }
 
   const content = renderFn({
