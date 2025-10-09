@@ -3,7 +3,7 @@ import { type ReactElement, cloneElement, forwardRef } from 'react'
 import { Pressable, Text, View } from 'react-native'
 
 import { CheckboxIcon } from './checkbox-icon'
-import { type UseCheckboxProps, useCheckbox } from './hooks/use-checkbox'
+import { type UseCheckboxProps, useCheckbox } from './hooks'
 
 cssInterop(CheckboxIcon, {
   className: {

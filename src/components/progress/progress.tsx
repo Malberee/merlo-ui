@@ -2,7 +2,7 @@ import { forwardRef } from 'react'
 import { ImageBackground, Text, View } from 'react-native'
 import Animated from 'react-native-reanimated'
 
-import { type UseProgressProps, useProgress } from './hooks/use-progress'
+import { type UseProgressProps, useProgress } from './hooks'
 import Stripes from './stripes'
 
 export interface ProgressProps extends UseProgressProps {}

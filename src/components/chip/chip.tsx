@@ -3,7 +3,7 @@ import { cssInterop } from 'nativewind'
 import { forwardRef, useMemo } from 'react'
 import { Pressable, Text, View } from 'react-native'
 
-import { type UseChipProps, useChip } from './hooks/use-chip'
+import { type UseChipProps, useChip } from './hooks'
 
 export interface ChipProps extends Omit<UseChipProps, 'isOneChar'> {}
 

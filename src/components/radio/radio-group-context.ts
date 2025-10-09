@@ -1,6 +1,6 @@
 import { createContext } from '@/utilities'
 
-import type { ContextType } from './hooks/use-radio-group'
+import type { ContextType } from './hooks'
 
 export const [RadioGroupProvider, useRadioGroupContext] =
   createContext<ContextType>({

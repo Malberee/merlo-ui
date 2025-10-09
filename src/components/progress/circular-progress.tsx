@@ -4,10 +4,7 @@ import { Text, View } from 'react-native'
 import Animated from 'react-native-reanimated'
 import Svg, { Circle, type SvgProps } from 'react-native-svg'
 
-import {
-  type UseCircularProgressProps,
-  useCircularProgress,
-} from './hooks/use-circular-progress'
+import { type UseCircularProgressProps, useCircularProgress } from './hooks'
 
 cssInterop(Svg, {
   className: {

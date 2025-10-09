@@ -2,10 +2,7 @@ import { forwardRef, useMemo } from 'react'
 import { Text, View } from 'react-native'
 
 import { CheckboxGroupProvider } from './checkbox-group-context'
-import {
-  type UseCheckboxGroupProps,
-  useCheckboxGroup,
-} from './hooks/use-checkbox-group'
+import { type UseCheckboxGroupProps, useCheckboxGroup } from './hooks'
 
 export interface CheckboxGroupProps extends UseCheckboxGroupProps {}
 

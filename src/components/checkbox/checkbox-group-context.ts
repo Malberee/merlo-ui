@@ -1,6 +1,6 @@
 import { createContext } from '@/utilities'
 
-import type { ContextType } from './hooks/use-checkbox-group'
+import type { ContextType } from './hooks'
 
 export const [CheckboxGroupProvider, useCheckboxGroupContext] =
   createContext<ContextType>({

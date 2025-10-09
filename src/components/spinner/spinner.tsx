@@ -3,7 +3,7 @@ import { forwardRef } from 'react'
 import { Text, View } from 'react-native'
 import Svg, { Circle, Defs, Mask } from 'react-native-svg'
 
-import { type UseSpinnerProps, useSpinner } from './hooks/use-spinner'
+import { type UseSpinnerProps, useSpinner } from './hooks'
 
 export interface SpinnerProps extends UseSpinnerProps {}
 

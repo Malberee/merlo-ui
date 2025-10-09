@@ -1,7 +1,7 @@
 import { forwardRef } from 'react'
 import { Text, View } from 'react-native'
 
-import { type UseRadioGroupProps, useRadioGroup } from './hooks/use-radio-group'
+import { type UseRadioGroupProps, useRadioGroup } from './hooks'
 import { RadioGroupProvider } from './radio-group-context'
 
 export interface RadioGroupProps

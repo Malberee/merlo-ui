@@ -3,7 +3,7 @@ import { cssInterop } from 'nativewind'
 import { forwardRef, useMemo } from 'react'
 import { Pressable, Text, TextInput, View } from 'react-native'
 
-import { type UseInputProps, useInput } from './hooks/use-input'
+import { type UseInputProps, useInput } from './hooks'
 
 cssInterop(CloseFilledIcon, {
   className: {

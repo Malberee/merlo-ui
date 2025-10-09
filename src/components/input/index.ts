@@ -4,7 +4,7 @@ import Input from './input'
 export type { InputProps } from './input'
 
 // export hooks
-export { useInput } from './hooks/use-input'
+export { useInput } from './hooks'
 
 // export component
 export { Input }

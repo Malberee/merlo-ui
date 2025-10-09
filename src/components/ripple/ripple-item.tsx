@@ -1,8 +1,7 @@
 import { type FC, type Key } from 'react'
 import Animated from 'react-native-reanimated'
 
-import type { RippleType } from './hooks'
-import { useRippleAnimation } from './hooks/use-ripple-animation'
+import { type RippleType, useRippleAnimation } from './hooks'
 
 export interface RippleItemProps {
   ripple: RippleType

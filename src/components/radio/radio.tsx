@@ -1,7 +1,7 @@
 import { forwardRef } from 'react'
 import { Pressable, Text, View } from 'react-native'
 
-import { type UseRadioProps, useRadio } from './hooks/use-radio'
+import { type UseRadioProps, useRadio } from './hooks'
 
 export interface RadioProps extends UseRadioProps {}
 
