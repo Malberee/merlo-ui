@@ -5,8 +5,14 @@ import '../global.css'
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Slider defaultValue={[1, 10]} />
+    <View className="py-12" style={styles.container}>
+      <Slider
+        orientation="vertical"
+        size="lg"
+        defaultValue={[0, 10]}
+        maxValue={10}
+        showSteps
+      />
     </View>
   )
 }

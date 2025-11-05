@@ -11,7 +11,7 @@ const slider = tv({
     step: ['h-1.5', 'w-1.5', 'absolute', 'rounded-full'],
     mark: ['absolute', 'text-small', 'text-foreground'],
     trackWrapper: 'relative gap-2',
-    track: ['flex-1', 'relative', 'rounded-lg', 'bg-default-300/50'],
+    track: ['flex-1', 'relative', 'rounded-full', 'bg-default-300/50'],
     filler: 'absolute h-full',
     thumb: [
       'flex-row',
@@ -43,7 +43,6 @@ const slider = tv({
         value: 'text-medium',
         mark: 'mt-2',
         thumb: 'h-7 w-7',
-        track: 'rounded-[0.89rem]',
       },
     },
     radius: {
@@ -127,7 +126,7 @@ const slider = tv({
         trackWrapper: 'h-full flex-col items-center justify-center',
         filler: 'h-auto w-full',
         thumb: 'left-1/2 -translate-x-1/2 translate-y-1/2',
-        track: 'border-t-default-300/50 h-full',
+        track: 'h-full border-y-transparent',
         labelWrapper: 'flex-col items-center justify-center',
         step: ['left-1/2', '-translate-x-1/2', 'translate-y-1/2'],
         mark: [
@@ -141,7 +140,7 @@ const slider = tv({
       false: {
         thumb: 'top-1/2 -translate-x-1/2 -translate-y-1/2',
         trackWrapper: 'flex-row items-center',
-        track: 'border-r-default-300/50',
+        track: 'border-x-transparent',
         labelWrapper: 'flex-row',
         step: ['top-1/2', '-translate-x-1/2', '-translate-y-1/2'],
         mark: ['top-1/2', 'mt-1', '-translate-x-1/2', 'translate-y-1/2'],
@@ -366,7 +365,7 @@ const slider = tv({
       isVertical: true,
       hasSingleThumb: false,
       class: {
-        track: 'border-b-default-300/50',
+        track: 'border-b-transparent',
       },
     },
     // !isVertical && !hasSingleThumb
@@ -374,7 +373,7 @@ const slider = tv({
       isVertical: false,
       hasSingleThumb: false,
       class: {
-        track: 'border-l-default-300/50',
+        track: 'border-l-transparent',
       },
     },
   ],
