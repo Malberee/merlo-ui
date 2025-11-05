@@ -84,7 +84,7 @@ export const useSliderThumb = (props: UseSliderThumbProps) => {
       role: 'slider',
       ref: inputRef,
       ...mergeProps(thumbProps, otherProps, {
-        onResponderGrant: () => state.setFocusedThumb(index),
+        onTouchStart: () => state.setFocusedThumb(index),
       }),
       className,
       style: thumbStyles,

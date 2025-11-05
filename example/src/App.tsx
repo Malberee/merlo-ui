@@ -1,4 +1,4 @@
-import { Input } from 'merlo-ui'
+import { Slider } from 'merlo-ui'
 import { StyleSheet, View } from 'react-native'
 
 import '../global.css'
@@ -6,7 +6,7 @@ import '../global.css'
 export default function App() {
   return (
     <View style={styles.container}>
-      <Input variant="flat" color="success" />
+      <Slider defaultValue={[1, 10]} />
     </View>
   )
 }
