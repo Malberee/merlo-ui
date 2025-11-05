@@ -3934,7 +3934,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-types/progress@npm:^3.5.12":
+"@react-types/progress@npm:3.5.12, @react-types/progress@npm:^3.5.12":
   version: 3.5.12
   resolution: "@react-types/progress@npm:3.5.12"
   dependencies:
@@ -11152,7 +11152,7 @@ __metadata:
     "@react-stately/slider": ^3.6.4
     "@react-stately/toggle": ^3.8.4
     "@react-types/checkbox": ^3.9.4
-    "@react-types/progress": ^3.5.12
+    "@react-types/progress": 3.5.12
     "@react-types/textfield": ^3.12.2
     "@release-it/conventional-changelog": ^9.0.2
     "@testing-library/react-native": ^13.2.0
