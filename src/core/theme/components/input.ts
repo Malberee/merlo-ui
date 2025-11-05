@@ -216,7 +216,8 @@ const input = tv({
       variant: 'flat',
       color: 'default',
       class: {
-        input: 'group-[[has-value=true]]:text-default-foreground',
+        input:
+          'group-[[has-value=true]]:text-default-foreground caret-default-foreground',
         clearButton: 'text-default-foreground',
       },
     },
@@ -225,7 +226,7 @@ const input = tv({
       color: 'primary',
       class: {
         inputWrapper: 'bg-primary-50',
-        input: 'placeholder:text-primary text-primary',
+        input: 'placeholder:text-primary text-primary caret-primary',
         label: 'text-primary',
         clearButton: 'text-primary',
       },
@@ -235,7 +236,7 @@ const input = tv({
       color: 'secondary',
       class: {
         inputWrapper: 'bg-secondary-50',
-        input: 'placeholder:text-secondary text-secondary',
+        input: 'placeholder:text-secondary text-secondary caret-secondary',
         label: 'text-secondary',
         clearButton: 'text-secondary',
       },
@@ -247,9 +248,9 @@ const input = tv({
         inputWrapper: 'bg-success-50',
         input: [
           'placeholder:text-success-600',
-          'text-success-600',
+          'text-success-600 caret-success-600',
           'dark:placeholder:text-success',
-          'dark:text-success',
+          'dark:text-success dark:caret-success',
         ],
         label: 'text-success-600 dark:text-success',
         clearButton: 'text-success-600 dark:text-success',
@@ -262,9 +263,9 @@ const input = tv({
         inputWrapper: 'bg-warning-50',
         input: [
           'placeholder:text-warning-600',
-          'text-warning-600',
+          'text-warning-600 caret-warning-600',
           'dark:placeholder:text-warning',
-          'dark:text-warning',
+          'dark:text-warning dark:caret-warning',
         ],
         label: 'text-warning-600 dark:text-warning',
         clearButton: 'text-warning-600 dark:text-warning',
@@ -277,9 +278,9 @@ const input = tv({
         inputWrapper: 'bg-danger-50',
         input: [
           'placeholder:text-danger',
-          'text-danger',
+          'text-danger caret-danger',
           'dark:placeholder:text-danger-500',
-          'dark:text-danger-500',
+          'dark:text-danger-500 dark:caret-danger-500',
         ],
         label: 'text-danger dark:text-danger-500',
         clearButton: 'text-danger dark:text-danger-500',

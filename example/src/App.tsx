@@ -6,7 +6,7 @@ import '../global.css'
 export default function App() {
   return (
     <View style={styles.container}>
-      <Input variant="flat" />
+      <Input variant="flat" color="success" />
     </View>
   )
 }
