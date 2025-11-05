@@ -1,4 +1,4 @@
-import { Switch } from 'merlo-ui'
+import { Input } from 'merlo-ui'
 import { StyleSheet, View } from 'react-native'
 
 import '../global.css'
@@ -6,7 +6,7 @@ import '../global.css'
 export default function App() {
   return (
     <View style={styles.container}>
-      <Switch />
+      <Input variant="flat" />
     </View>
   )
 }
