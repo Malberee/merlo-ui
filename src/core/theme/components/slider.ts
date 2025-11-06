@@ -13,14 +13,9 @@ const slider = tv({
     trackWrapper: 'relative gap-2',
     track: ['flex-1', 'relative', 'rounded-full', 'bg-default-300/50'],
     filler: 'absolute h-full',
-    thumb: [
-      'flex-row',
-      'absolute',
-      'justify-center',
-      'items-center',
-      'bg-background',
-      'border-2',
-    ],
+    thumbWrapper: ['flex-row', 'absolute', 'justify-center', 'items-center'],
+    thumbHitbox: ['size-12', 'z-10', 'absolute', 'pointer-events-auto'],
+    thumb: 'bg-background',
     startContent: [],
     endContent: [],
   },
@@ -29,63 +24,71 @@ const slider = tv({
       sm: {
         label: 'text-small',
         value: 'text-small',
-        thumb: 'h-5 w-5',
+        thumbWrapper: 'h-5 w-5',
+        thumb: 'h-4 w-4',
         step: 'bg-default-200',
       },
       md: {
         label: 'text-small',
         value: 'text-small',
-        thumb: 'h-6 w-6',
+        thumbWrapper: 'h-6 w-6',
+        thumb: 'h-5 w-5',
       },
       lg: {
         step: 'h-2 w-2',
         label: 'text-medium',
         value: 'text-medium',
         mark: 'mt-2',
-        thumb: 'h-7 w-7',
+        thumbWrapper: 'h-7 w-7',
+        thumb: 'h-5 w-5',
       },
     },
     radius: {
       none: {
+        thumbWrapper: 'rounded-none',
         thumb: 'rounded-none',
       },
       sm: {
-        thumb: 'rounded-[calc(theme(borderRadius.small)/2)]',
+        thumbWrapper: 'rounded-[calc(theme(borderRadius.small)/2)]',
+        thumb: 'rounded-[calc(theme(borderRadius.small)/3)]',
       },
       md: {
-        thumb: 'rounded-[calc(theme(borderRadius.medium)/2)]',
+        thumbWrapper: 'rounded-[calc(theme(borderRadius.medium)/2)]',
+        thumb: 'rounded-[calc(theme(borderRadius.medium)/3)]',
       },
       lg: {
-        thumb: 'rounded-[calc(theme(borderRadius.large)/1.5)]',
+        thumbWrapper: 'rounded-[calc(theme(borderRadius.large)/1.5)]',
+        thumb: 'rounded-[calc(theme(borderRadius.large)/2)]',
       },
       full: {
+        thumbWrapper: 'rounded-full',
         thumb: 'rounded-full',
       },
     },
     color: {
       foreground: {
         filler: 'bg-foreground',
-        thumb: 'border-foreground',
+        thumbWrapper: 'bg-foreground',
       },
       primary: {
         filler: 'bg-primary',
-        thumb: 'border-primary',
+        thumbWrapper: 'bg-primary',
       },
       secondary: {
         filler: 'bg-secondary',
-        thumb: 'border-secondary',
+        thumbWrapper: 'bg-secondary',
       },
       success: {
         filler: 'bg-success',
-        thumb: 'border-success',
+        thumbWrapper: 'bg-success',
       },
       warning: {
         filler: 'bg-warning',
-        thumb: 'border-warning',
+        thumbWrapper: 'bg-warning',
       },
       danger: {
         filler: 'bg-danger',
-        thumb: 'border-danger',
+        thumbWrapper: 'bg-danger',
       },
     },
     isDisabled: {
@@ -103,7 +106,7 @@ const slider = tv({
     },
     hideThumb: {
       true: {
-        thumb: 'sr-only opacity-0',
+        thumbWrapper: 'sr-only opacity-0',
       },
     },
     hasSingleThumb: {
@@ -125,7 +128,7 @@ const slider = tv({
         base: 'h-full w-auto flex-col-reverse items-center',
         trackWrapper: 'h-full flex-col items-center justify-center',
         filler: 'h-auto w-full',
-        thumb: 'left-1/2 -translate-x-1/2 translate-y-1/2',
+        thumbWrapper: 'left-1/2 -translate-x-1/2 translate-y-1/2',
         track: 'h-full border-y-transparent',
         labelWrapper: 'flex-col items-center justify-center',
         step: ['left-1/2', '-translate-x-1/2', 'translate-y-1/2'],
@@ -138,7 +141,7 @@ const slider = tv({
         ],
       },
       false: {
-        thumb: 'top-1/2 -translate-x-1/2 -translate-y-1/2',
+        thumbWrapper: 'top-1/2 -translate-x-1/2 -translate-y-1/2',
         trackWrapper: 'flex-row items-center',
         track: 'border-x-transparent',
         labelWrapper: 'flex-row',
@@ -149,9 +152,13 @@ const slider = tv({
     disableAnimation: {
       true: {},
       false: {
-        thumb: 'transition-transform motion-reduce:transition-none',
+        thumb: 'transition-all motion-reduce:transition-none',
         mark: 'duration-250 transition-opacity motion-reduce:transition-none',
       },
+    },
+    disableThumbScale: {
+      true: {},
+      false: {},
     },
   },
   compoundVariants: [
@@ -159,7 +166,7 @@ const slider = tv({
     {
       size: ['sm', 'md'],
       class: {
-        thumb: 'shadow-small',
+        thumbWrapper: 'shadow-small',
       },
     },
     // size && color

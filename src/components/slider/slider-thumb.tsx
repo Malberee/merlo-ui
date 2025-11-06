@@ -7,20 +7,31 @@ import { type UseSliderThumbProps, useSliderThumb } from './hooks'
 export interface SliderThumbProps extends UseSliderThumbProps {}
 
 const SliderThumb = forwardRef<View, SliderThumbProps>((props, ref) => {
-  const { getThumbProps, renderThumb, index } = useSliderThumb({
+  const {
+    getWrapperThumbProps,
+    getThumbProps,
+    renderThumb,
+    index,
+    thumbHitboxClassName,
+  } = useSliderThumb({
     ...props,
     ref,
   })
 
-  const thumbProps = {
-    ...getThumbProps(),
+  const thumbWrapperProps = {
+    ...getWrapperThumbProps(),
     index,
-    children: <View className="pointer-events-auto absolute z-10 size-12" />,
+    children: (
+      <>
+        <View {...getThumbProps()} />
+        <View className={thumbHitboxClassName} />
+      </>
+    ),
   }
 
   const content = renderFn({
     Component: View,
-    props: thumbProps,
+    props: thumbWrapperProps,
     renderCustom: renderThumb,
   }) as React.ReactElement
 

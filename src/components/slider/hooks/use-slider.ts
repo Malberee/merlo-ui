@@ -343,7 +343,15 @@ export const useSlider = (originalProps: UseSliderProps) => {
       orientation,
       isVertical,
       renderThumb,
-      'className': slots.thumb({ class: classNames?.thumb }),
+      disableAnimation,
+      'disableThumbScale': originalProps.disableThumbScale,
+      'thumbWrapperClassName': slots.thumbWrapper({
+        class: classNames?.thumbWrapper,
+      }),
+      'thumbClassName': slots.thumb({ class: classNames?.thumb }),
+      'thumbHitboxClassName': slots.thumbHitbox({
+        class: classNames?.thumbHitbox,
+      }),
     }
   }
 

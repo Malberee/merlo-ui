@@ -6,7 +6,7 @@ import { mergeProps } from '@react-aria/utils'
 import { useSliderThumb as useAriaSliderThumb } from '@react-native-aria/slider'
 import type { SliderState } from '@react-stately/slider'
 import { type RefObject, useRef } from 'react'
-import { type View } from 'react-native'
+import { type View, type ViewStyle } from 'react-native'
 
 import type { UseSliderProps } from './use-slider'
 
@@ -42,6 +42,9 @@ interface Props extends RNMerloUIProps {
    * Function to render the thumb. It can be used to add a tooltip or custom icon.
    */
   renderThumb?: UseSliderProps['renderThumb']
+  thumbWrapperClassName?: string
+  thumbClassName?: string
+  thumbHitboxClassName?: string
 }
 
 export type UseSliderThumbProps = Props &
@@ -54,8 +57,12 @@ export const useSliderThumb = (props: UseSliderThumbProps) => {
     index = 0,
     name,
     trackLayout,
-    className,
+    thumbWrapperClassName,
+    thumbClassName,
+    thumbHitboxClassName,
     isVertical,
+    disableAnimation,
+    disableThumbScale,
     renderThumb,
     ...otherProps
   } = props
@@ -73,20 +80,41 @@ export const useSliderThumb = (props: UseSliderThumbProps) => {
     state
   )
 
-  const thumbStyles: any = {
+  const thumbWrapperStyles: ViewStyle = {
     bottom: isVertical ? `${state.getThumbPercent(index) * 100}%` : undefined,
     left: !isVertical ? `${state.getThumbPercent(index) * 100}%` : '50%',
     zIndex: state.focusedThumb === index ? 10 : 1,
   }
 
-  const getThumbProps: PropGetter = (props = {}) => {
+  const getWrapperThumbProps: PropGetter = (props = {}) => {
     return {
       role: 'slider',
       ref: inputRef,
       ...mergeProps(thumbProps, otherProps, {
         onTouchStart: () => state.setFocusedThumb(index),
       }),
-      className,
+      className: thumbWrapperClassName,
+      style: thumbWrapperStyles,
+      ...props,
+    }
+  }
+
+  const thumbStyles = {
+    transform: [
+      {
+        scale:
+          state.isThumbDragging(index) &&
+          !disableThumbScale &&
+          !disableAnimation
+            ? 0.8
+            : 1,
+      },
+    ],
+  }
+
+  const getThumbProps: PropGetter = (props = {}) => {
+    return {
+      className: thumbClassName,
       style: thumbStyles,
       ...props,
     }
@@ -94,7 +122,9 @@ export const useSliderThumb = (props: UseSliderThumbProps) => {
 
   return {
     index,
+    getWrapperThumbProps,
     getThumbProps,
     renderThumb,
+    thumbHitboxClassName,
   }
 }
