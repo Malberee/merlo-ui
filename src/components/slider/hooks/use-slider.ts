@@ -241,6 +241,16 @@ export const useSlider = (originalProps: UseSliderProps) => {
     return `${numberFormatter.format(start)} - ${numberFormatter.format(end)}`
   }
 
+  const handlePressOnTrack = (e: GestureResponderEvent) => {
+    const { pageX, pageY } = e.nativeEvent
+
+    e.currentTarget.measure((_, __, ___, ____, pageXParent, pageYParent) => {
+      e.nativeEvent.locationX = pageX - pageXParent
+      e.nativeEvent.locationY = pageY - pageYParent
+      trackProps?.onPress(e)
+    })
+  }
+
   const value =
     state.values.length === 1
       ? numberFormatter.format(state.getThumbValue(0))
@@ -299,7 +309,7 @@ export const useSlider = (originalProps: UseSliderProps) => {
     return {
       className: slots.track({ class: classNames?.track }),
       onLayout,
-      ...trackProps,
+      onTouchStart: handlePressOnTrack,
       ...props,
     }
   }

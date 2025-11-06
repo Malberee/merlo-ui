@@ -14,7 +14,7 @@ const slider = tv({
     track: ['flex-1', 'relative', 'rounded-full', 'bg-default-300/50'],
     filler: 'absolute h-full',
     thumbWrapper: ['flex-row', 'absolute', 'justify-center', 'items-center'],
-    thumbHitbox: ['size-12', 'z-10', 'absolute', 'pointer-events-auto'],
+    thumbHitbox: ['size-11', 'z-10', 'absolute', 'pointer-events-auto'],
     thumb: 'bg-background',
     startContent: [],
     endContent: [],
