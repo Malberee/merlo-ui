@@ -6,7 +6,13 @@ import '../global.css'
 export default function App() {
   return (
     <View className="bg-background dark py-12" style={styles.container}>
-      <Slider size="lg" defaultValue={[0, 10]} maxValue={10} showSteps />
+      <Slider
+        label="Slider"
+        defaultValue={[0, 10]}
+        maxValue={10}
+        showSteps
+        onChangeEnd={console.log}
+      />
     </View>
   )
 }

@@ -309,7 +309,7 @@ export const useSlider = (originalProps: UseSliderProps) => {
     return {
       className: slots.track({ class: classNames?.track }),
       onLayout,
-      onTouchStart: handlePressOnTrack,
+      onTouchEnd: handlePressOnTrack,
       ...props,
     }
   }
