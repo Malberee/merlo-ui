@@ -32,6 +32,7 @@ const Input = forwardRef<TextInput, InputProps>((props, ref) => {
     errorMessage,
     isUnderlined,
     isInvalid,
+    isRequired,
     getBaseProps,
     getLabelProps,
     getInputProps,
@@ -48,7 +49,20 @@ const Input = forwardRef<TextInput, InputProps>((props, ref) => {
     ref,
   })
 
-  const labelContent = label ? <Text {...getLabelProps()}>{label}</Text> : null
+  const labelContent = label ? (
+    <Text {...getLabelProps()}>
+      {label}
+      {isRequired ? (
+        <Text
+          className={slots.requiredIndicator({
+            class: classNames?.requiredIndicator,
+          })}
+        >
+          {'\t*'}
+        </Text>
+      ) : null}
+    </Text>
+  ) : null
 
   const end = useMemo(() => {
     if (isClearable) {
@@ -95,9 +109,7 @@ const Input = forwardRef<TextInput, InputProps>((props, ref) => {
       return (
         <View {...getMainWrapperProps()}>
           <View {...getInputWrapperProps()}>
-            {!isOutsideLeft && !isOutsideTop ? (
-              <Text {...getLabelProps()}>{labelContent}</Text>
-            ) : null}
+            {!isOutsideLeft && !isOutsideTop ? labelContent : null}
             {innerWrapper()}
           </View>
 
@@ -110,7 +122,7 @@ const Input = forwardRef<TextInput, InputProps>((props, ref) => {
     return (
       <>
         <View {...getInputWrapperProps()}>
-          <Text {...getLabelProps()}>{labelContent}</Text>
+          {labelContent}
           {innerWrapper()}
         </View>
         {isUnderlined && <View {...getUnderlineProps()} />}
@@ -121,9 +133,7 @@ const Input = forwardRef<TextInput, InputProps>((props, ref) => {
 
   return (
     <Pressable {...getBaseProps()}>
-      {isOutsideLeft || isOutsideTop ? (
-        <Text {...getLabelProps()}>{labelContent}</Text>
-      ) : null}
+      {isOutsideLeft || isOutsideTop ? labelContent : null}
       {mainWrapper()}
     </Pressable>
   )

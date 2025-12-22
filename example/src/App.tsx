@@ -6,7 +6,7 @@ import '../global.css'
 export default function App() {
   return (
     <View className="bg-background dark py-12" style={styles.container}>
-      <Input label="Label" labelPlacement="outside" size="lg" />
+      <Input isRequired label="Label" labelPlacement="outside" size="lg" />
     </View>
   )
 }

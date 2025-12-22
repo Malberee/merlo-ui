@@ -415,6 +415,7 @@ export const useInput = <T extends TextInput = TextInput>(
     shouldLabelBeInside,
     hasPlaceholder,
     isInvalid: originalProps.isInvalid,
+    isRequired: originalProps.isRequired,
     errorMessage,
     isUnderlined,
     getBaseProps,

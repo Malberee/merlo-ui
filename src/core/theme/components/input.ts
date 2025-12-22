@@ -46,6 +46,7 @@ const input = tv({
     helperWrapper: 'relative flex-col gap-1.5 p-1',
     description: 'text-tiny text-foreground-400',
     errorMessage: 'text-tiny text-danger',
+    requiredIndicator: 'text-danger ml-0.5',
     underline: '',
   },
   variants: {
