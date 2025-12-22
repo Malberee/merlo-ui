@@ -1,4 +1,4 @@
-import { useProviderContext } from '@/core'
+import { useLabelPlacement, useProviderContext } from '@/core'
 import {
   type PropGetter,
   type RNMerloUIProps,
@@ -175,17 +175,10 @@ export const useInput = <T extends TextInput = TextInput>(
     onPress: handleClear,
   })
 
-  const labelPlacement = useMemo<InputVariantProps['labelPlacement']>(() => {
-    if (
-      (!originalProps.labelPlacement ||
-        originalProps.labelPlacement === 'inside') &&
-      !label
-    ) {
-      return 'outside'
-    }
-
-    return originalProps.labelPlacement ?? 'inside'
-  }, [])
+  const labelPlacement = useLabelPlacement({
+    labelPlacement: originalProps.labelPlacement,
+    label,
+  })
 
   const errorMessage =
     typeof props.errorMessage === 'string' && props.errorMessage
@@ -194,8 +187,12 @@ export const useInput = <T extends TextInput = TextInput>(
   const hasPlaceholder = !!props.placeholder
   const hasLabel = !!label
   const hasHelper = !!description || !!errorMessage
+  const isOutsideLeft = labelPlacement === 'outside-left'
+  const isOutsideTop = labelPlacement === 'outside-top'
+
   const shouldLabelBeOutside =
-    labelPlacement === 'outside' || labelPlacement === 'outside-left'
+    labelPlacement === 'outside' || isOutsideLeft || isOutsideTop
+
   const shouldLabelBeInside = labelPlacement === 'inside'
   const isPlaceholderShown = inputRef.current
     ? (!inputRef.current.value ||
@@ -204,11 +201,11 @@ export const useInput = <T extends TextInput = TextInput>(
         inputValue === '') &&
       hasPlaceholder
     : false
-  const isOutsideLeft = labelPlacement === 'outside-left'
 
   const hasStartContent = !!startContent
   const isLabelOutside = shouldLabelBeOutside
-    ? labelPlacement === 'outside-left' ||
+    ? isOutsideLeft ||
+      isOutsideTop ||
       hasPlaceholder ||
       (labelPlacement === 'outside' && hasStartContent)
     : false
@@ -220,6 +217,7 @@ export const useInput = <T extends TextInput = TextInput>(
       input({
         ...variantProps,
         isInvalid: originalProps.isInvalid,
+        hasLabel,
         labelPlacement,
         isClearable,
         disableAnimation,
@@ -411,6 +409,7 @@ export const useInput = <T extends TextInput = TextInput>(
     hasStartContent,
     isLabelOutside,
     isOutsideLeft,
+    isOutsideTop,
     isLabelOutsideAsPlaceholder,
     shouldLabelBeOutside,
     shouldLabelBeInside,

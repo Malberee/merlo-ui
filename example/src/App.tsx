@@ -1,4 +1,4 @@
-import { Slider } from 'merlo-ui'
+import { Input } from 'merlo-ui'
 import { StyleSheet, View } from 'react-native'
 
 import '../global.css'
@@ -6,13 +6,7 @@ import '../global.css'
 export default function App() {
   return (
     <View className="bg-background dark py-12" style={styles.container}>
-      <Slider
-        label="Slider"
-        defaultValue={[0, 10]}
-        maxValue={10}
-        showSteps
-        onChangeEnd={console.log}
-      />
+      <Input label="Label" labelPlacement="outside" size="lg" />
     </View>
   )
 }

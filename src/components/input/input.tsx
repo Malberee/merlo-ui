@@ -27,6 +27,7 @@ const Input = forwardRef<TextInput, InputProps>((props, ref) => {
     endContent,
     hasHelper,
     isOutsideLeft,
+    isOutsideTop,
     shouldLabelBeOutside,
     errorMessage,
     isUnderlined,
@@ -94,7 +95,7 @@ const Input = forwardRef<TextInput, InputProps>((props, ref) => {
       return (
         <View {...getMainWrapperProps()}>
           <View {...getInputWrapperProps()}>
-            {!isOutsideLeft ? (
+            {!isOutsideLeft && !isOutsideTop ? (
               <Text {...getLabelProps()}>{labelContent}</Text>
             ) : null}
             {innerWrapper()}
@@ -120,7 +121,9 @@ const Input = forwardRef<TextInput, InputProps>((props, ref) => {
 
   return (
     <Pressable {...getBaseProps()}>
-      {isOutsideLeft ? <Text {...getLabelProps()}>{labelContent}</Text> : null}
+      {isOutsideLeft || isOutsideTop ? (
+        <Text {...getLabelProps()}>{labelContent}</Text>
+      ) : null}
       {mainWrapper()}
     </Pressable>
   )

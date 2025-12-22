@@ -7,7 +7,6 @@ const input = tv({
     base: 'group flex-col',
     label: [
       'absolute',
-      'left-3',
       'z-10',
       'pointer-events-none',
       'subpixel-antialiased',
@@ -26,7 +25,11 @@ const input = tv({
     ],
     innerWrapper: 'box-border h-full grow flex-row items-center',
     input: [
-      'placeholder:text-foreground-500 h-[theme(lineHeight.small)] grow bg-transparent py-0',
+      'p-0',
+      'placeholder:text-foreground-500',
+      'h-[theme(lineHeight.small)]',
+      'grow',
+      'bg-transparent',
       'group-[[has-start-content=true]]:pl-1.5',
       'group-[[has-end-content=true]]:pr-1.5',
     ],
@@ -74,7 +77,7 @@ const input = tv({
         ],
         innerWrapper: 'pb-1',
         input: 'group-[[has-value=true]]:text-foreground',
-        label: ['group-[[filled-within=true]]:text-foreground', '!left-1'],
+        label: ['group-[[filled-within=true]]:text-foreground'],
         underline: [
           'w-full',
           'scale-x-0',
@@ -108,7 +111,7 @@ const input = tv({
       },
       lg: {
         inputWrapper: 'rounded-large h-12 min-h-12',
-        input: 'text-medium',
+        input: 'text-medium h-[theme(lineHeight.medium)]',
         clearButton: 'text-large',
       },
     },
@@ -132,13 +135,16 @@ const input = tv({
     labelPlacement: {
       'outside': {
         mainWrapper: 'flex-col',
-        label: 'group-[[filled-within=true]]:left-0',
       },
       'outside-left': {
         base: 'flex-row flex-nowrap items-center',
         inputWrapper: 'flex-1',
         mainWrapper: 'flex-col',
-        label: 'text-foreground relative left-0 pl-2 pr-2',
+        label: 'text-foreground relative pl-2 pr-2',
+      },
+      'outside-top': {
+        mainWrapper: 'flex flex-col',
+        label: 'text-foreground pointer-events-auto relative pb-2',
       },
       'inside': {
         label: 'text-tiny',
@@ -151,6 +157,7 @@ const input = tv({
         base: 'w-full',
       },
     },
+    hasLabel: { true: {}, false: {} },
     isClearable: {
       true: {
         input: 'pr-6',
@@ -431,7 +438,6 @@ const input = tv({
       size: 'sm',
       class: {
         inputWrapper: 'px-3',
-        label: 'left-3',
       },
     },
     {
@@ -439,7 +445,6 @@ const input = tv({
       size: 'md',
       class: {
         inputWrapper: 'px-4',
-        label: 'left-4',
       },
     },
     {
@@ -447,7 +452,6 @@ const input = tv({
       size: 'lg',
       class: {
         inputWrapper: 'px-5',
-        label: 'left-5',
       },
     },
     // !disableAnimation & variant
@@ -493,6 +497,7 @@ const input = tv({
       size: 'sm',
       class: {
         inputWrapper: 'h-12 px-3 py-1.5',
+        label: 'left-3',
       },
     },
     {
@@ -500,13 +505,14 @@ const input = tv({
       size: 'md',
       class: {
         inputWrapper: 'h-14 py-2',
+        label: 'left-3',
       },
     },
     {
       labelPlacement: 'inside',
       size: 'lg',
       class: {
-        label: 'text-small',
+        label: 'text-small left-3',
         inputWrapper: 'h-16 gap-0 py-2.5',
       },
     },
@@ -524,6 +530,21 @@ const input = tv({
       labelPlacement: ['inside', 'outside'],
       class: {
         label: ['group-[[filled-within=true]]:pointer-events-auto'],
+      },
+    },
+    // labelPlacement=[outside] & !isMultiline
+    {
+      labelPlacement: 'outside',
+      isMultiline: false,
+      class: {
+        base: 'relative justify-end',
+        label: [
+          'pb-0',
+          'z-20',
+          'top-1/2',
+          '-translate-y-1/2',
+          'group-[[filled-within=true]]:left-0',
+        ],
       },
     },
     // labelPlacement=inside
@@ -665,6 +686,34 @@ const input = tv({
         ],
       },
     },
+    // hasLabel & outside & size
+    {
+      labelPlacement: 'outside',
+      size: 'sm',
+      isMultiline: false,
+      hasLabel: true,
+      class: {
+        base: 'mt-[calc(theme(fontSize.small)_+_8px)]',
+      },
+    },
+    {
+      labelPlacement: 'outside',
+      size: 'md',
+      isMultiline: false,
+      hasLabel: true,
+      class: {
+        base: 'mt-[calc(theme(fontSize.small)_+_10px)]',
+      },
+    },
+    {
+      labelPlacement: 'outside',
+      size: 'lg',
+      isMultiline: false,
+      hasLabel: true,
+      class: {
+        base: 'mt-[calc(theme(fontSize.small)_+_12px)]',
+      },
+    },
     // outside & size
     {
       labelPlacement: 'outside',
@@ -672,11 +721,10 @@ const input = tv({
       isMultiline: false,
       class: {
         label: [
-          'start-2',
+          'left-2',
           'text-tiny',
-          'group-[[filled-within=true]]:-translate-y-[calc(theme(lineHeight.small)_-_theme(fontSize.tiny)/2_+_16px)]',
+          'group-[[filled-within=true]]:-translate-y-[calc(theme(lineHeight.small)_+_16px)]',
         ],
-        base: 'group-[[has-label=true]]:mt-[calc(theme(fontSize.small)_+_8px)]',
       },
     },
     {
@@ -685,12 +733,11 @@ const input = tv({
       isMultiline: false,
       class: {
         label: [
-          'start-3',
+          'left-3',
           'end-auto',
           'text-small',
-          'group-[[filled-within=true]]:-translate-y-[calc(theme(lineHeight.small)_-_theme(fontSize.small)/2_+_20px)]',
+          'group-[[filled-within=true]]:-translate-y-[calc(theme(lineHeight.small)_+_20px)]',
         ],
-        base: 'group-[[has-label=true]]:mt-[calc(theme(fontSize.small)_+_10px)]',
       },
     },
     {
@@ -699,12 +746,11 @@ const input = tv({
       isMultiline: false,
       class: {
         label: [
-          'start-3',
+          'left-3',
           'end-auto',
           'text-medium',
-          'group-[[filled-within=true]]:-translate-y-[calc(theme(lineHeight.small)_-_theme(fontSize.small)/2_+_24px)]',
+          'group-[[filled-within=true]]:-translate-y-[calc(theme(lineHeight.small)_+_24px)]',
         ],
-        base: 'group-[[has-label=true]]:mt-[calc(theme(fontSize.small)_+_12px)]',
       },
     },
     // outside-left & size & hasHelper
