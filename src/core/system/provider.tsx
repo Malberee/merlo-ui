@@ -9,11 +9,12 @@ export interface MerloUIProviderProps extends ProviderContextProps {
 export const MerloUIProvider: FC<MerloUIProviderProps> = ({
   children,
   disableRipple,
+  labelPlacement,
   disableAnimation,
 }) => {
   const context = useMemo<ProviderContextProps>(
-    () => ({ disableRipple, disableAnimation }),
-    [disableAnimation, disableRipple]
+    () => ({ disableRipple, labelPlacement, disableAnimation }),
+    [disableAnimation, labelPlacement, disableRipple]
   )
   return <ProviderContext value={context}>{children}</ProviderContext>
 }
