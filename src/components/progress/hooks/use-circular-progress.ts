@@ -9,7 +9,7 @@ import {
   type CircularProgressSlots,
   type CircularProgressVariantProps,
   circularProgress,
-} from '@/core/theme/components/circular-progress'
+} from '@/core/theme'
 import { useIsMounted } from '@/hooks'
 import {
   type ReactRef,
