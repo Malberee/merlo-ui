@@ -11,6 +11,7 @@ const input = tv({
       'pointer-events-none',
       'subpixel-antialiased',
       'text-small',
+      'h-[theme(lineHeight.small)]',
       'text-foreground-500',
     ],
     mainWrapper: 'grow',
@@ -100,7 +101,7 @@ const input = tv({
     },
     size: {
       sm: {
-        label: 'text-tiny',
+        label: 'text-tiny h-[theme(lineHeight.tiny)]',
         inputWrapper: 'rounded-small h-8 min-h-8 px-2',
         input: 'text-small h-[theme(lineHeight.small)]',
         clearButton: 'text-medium',
@@ -148,7 +149,7 @@ const input = tv({
         label: 'text-foreground pointer-events-auto relative pb-2',
       },
       'inside': {
-        label: 'text-tiny',
+        label: 'text-tiny h-[theme(lineHeight.tiny)]',
         inputWrapper: 'flex-col items-start justify-center gap-0',
         innerWrapper: 'group-[[has-label=true]]:items-end',
       },
@@ -513,7 +514,7 @@ const input = tv({
       labelPlacement: 'inside',
       size: 'lg',
       class: {
-        label: 'text-small left-3',
+        label: 'text-small left-3 h-[theme(lineHeight.small)]',
         inputWrapper: 'h-16 gap-0 py-2.5',
       },
     },
@@ -583,7 +584,7 @@ const input = tv({
       labelPlacement: 'inside',
       size: ['sm', 'md'],
       class: {
-        label: 'text-small',
+        label: 'text-small h-[theme(lineHeight.small)]',
       },
     },
     {
@@ -613,6 +614,7 @@ const input = tv({
       class: {
         label: [
           'text-medium',
+          'h-[theme(lineHeight.medium)]',
           'group-[[filled-within=true]]:-translate-y-[calc(theme(lineHeight.small)/2_+_theme(fontSize.small)/2_-_8px)]',
         ],
       },
@@ -648,6 +650,7 @@ const input = tv({
       class: {
         label: [
           'text-medium',
+          'h-[theme(lineHeight.medium)]',
           'group-[[filled-within=true]]:-translate-y-[calc(theme(lineHeight.small)/2_+_theme(fontSize.small)/2_-_8px_-_theme(borderWidth.medium))]',
         ],
       },
@@ -683,6 +686,7 @@ const input = tv({
       class: {
         label: [
           'text-medium',
+          'h-[theme(lineHeight.medium)]',
           'group-[[filled-within=true]]:-translate-y-[calc(theme(lineHeight.small)/2_+_theme(fontSize.small)/2_-_4px)]',
         ],
       },
@@ -724,6 +728,7 @@ const input = tv({
         label: [
           'left-2',
           'text-tiny',
+          'h-[theme(lineHeight.tiny)]',
           'group-[[filled-within=true]]:-translate-y-[calc(theme(lineHeight.small)_+_16px)]',
         ],
       },
@@ -737,6 +742,7 @@ const input = tv({
           'left-3',
           'end-auto',
           'text-small',
+          'h-[theme(lineHeight.small)]',
           'group-[[filled-within=true]]:-translate-y-[calc(theme(lineHeight.small)_+_20px)]',
         ],
       },
@@ -750,6 +756,7 @@ const input = tv({
           'left-3',
           'end-auto',
           'text-medium',
+          'h-[theme(lineHeight.medium)]',
           'group-[[filled-within=true]]:-translate-y-[calc(theme(lineHeight.small)_+_24px)]',
         ],
       },
