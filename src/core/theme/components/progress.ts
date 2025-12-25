@@ -2,6 +2,24 @@ import type { VariantProps } from 'tailwind-variants'
 
 import { tv } from '../utils/tv'
 
+/**
+ * Progress **Tailwind Variants** component
+ *
+ * @example
+ * ```js
+ * const { base, labelWrapper, label, value, track, indicator } = progress({...})
+ *
+ * <View className={base()}>
+ *   <View className={labelWrapper()}>
+ *      <Text className={label()}>{label}</Text>
+ *      <Text className={value()}>{value}</Text>
+ *   </View>
+ *   <View className={track()}>
+ *     <View className={indicator()} style={{width: `${value}%`}} />
+ *   </View>
+ * </View>
+ * ```
+ */
 const progress = tv({
   slots: {
     base: 'flex w-full flex-col gap-2',

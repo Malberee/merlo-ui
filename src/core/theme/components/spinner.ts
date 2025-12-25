@@ -2,6 +2,22 @@ import type { VariantProps } from 'tailwind-variants'
 
 import { tv } from '../utils/tv'
 
+/**
+ * Spinner wrapper **Tailwind Variants** component
+ *
+ * @example
+ * ```js
+ * const { base, wrapper, circle1, circle2, label } = spinner({...})
+ *
+ * <View className={base())}>
+ *    <View className={wrapper()}>
+ *      <Svg className={circle1()}/>
+ *      <Svg className={circle2()}/>
+ *    </View>
+ *    <Text className={label()}>Label</Text>
+ * </View>
+ * ```
+ */
 const spinner = tv({
   slots: {
     base: 'relative flex-col items-center justify-center gap-2',

@@ -3,6 +3,26 @@ import type { VariantProps } from 'tailwind-variants'
 import { colorVariants } from '../utils'
 import { tv } from '../utils/tv'
 
+/**
+ * Checkbox wrapper **Tailwind Variants** component
+ *
+ * @example
+ * ```js
+ * const { base, wrapper, mark, labelWrapper, label, line } = checkbox({...})
+ *
+ * <Pressable className={base())}>
+ *    <View className={wrapper()}>
+ *      <View className={mark()}>
+ *        // check icon
+ *      </View>
+ *    </View>
+ *    <View className={labelWrapper()}>
+ *      <Text className={label()}>Label</Text>
+ *      <View className={line()} />
+ *    </View>
+ * </Pressable>
+ * ```
+ */
 const checkbox = tv({
   slots: {
     base: 'group -m-2 flex-row items-center justify-start p-2',

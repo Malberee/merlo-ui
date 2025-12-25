@@ -2,6 +2,31 @@ import type { VariantProps } from 'tailwind-variants'
 
 import { tv } from '../utils/tv'
 
+/**
+ * Slider wrapper **Tailwind Variants** component
+ *
+ * @example
+ * ```js
+ * const slots = slider()
+ *
+ * <View className={slots.base()}>
+ *  <View className={slots.labelWrapper()}>
+ *    <Text className={slots.label()}>Label</Te>
+ *    <Text className={slots.value()}>Value</Text>
+ *  </View>
+ *  <View className={slots.trackWrapper()}>
+ *      <View className={slots.startContent()}>Start Content</View>
+ *      <View className={slots.track()}>
+ *         <View className={slots.filler()} />
+ *         <View className={slots.step()} />
+ *         <View className={slots.thumb()} />
+ *         <Text className={slots.mark()}>Mark</Text>
+ *      </View>
+ *     <View className={slots.endContent()}>End Content</View>
+ *   </View>
+ * </View>
+ * ```
+ */
 const slider = tv({
   slots: {
     base: 'flex w-full flex-col gap-1',

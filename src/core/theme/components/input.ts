@@ -2,6 +2,24 @@ import type { VariantProps } from 'tailwind-variants'
 
 import { tv } from '../utils/tv'
 
+/**
+ * Input wrapper **Tailwind Variants** component
+ *
+ * @example
+ * ```js
+ * const { base, label, inputWrapper, input, clearButton, description, errorMessage } = input({...})
+ *
+ * <Pressable className={base())}>
+ *    <Text className={label()}>Label</Text>
+ *    <View className={inputWrapper()}>
+ *      <TextInput className={input()}/>
+ *      <Pressable className={clearButton()}>Clear</Pressable>
+ *    </View>
+ *    <Text className={description()}>Description</Text>
+ *    <Text className={errorMessage()}>Invalid input</Text>
+ * </Pressable>
+ * ```
+ */
 const input = tv({
   slots: {
     base: 'group flex-col',

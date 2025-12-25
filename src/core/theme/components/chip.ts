@@ -3,6 +3,22 @@ import type { VariantProps } from 'tailwind-variants'
 import { colorVariants } from '../utils'
 import { tv } from '../utils/tv'
 
+/**
+ * Chip wrapper **Tailwind Variants** component
+ *
+ * @example
+ * ```js
+ * const { base, content, dot, avatar, closeButton } = chip({...})
+ *
+ * <View className={base())}>
+ *    // left content
+ *   <View className={dot()} />
+ *   <Text className={content()}>Default</Text>
+ *   <Pressable className={closeButton()}>close button</Pressable>
+ *    // right content
+ * </View>
+ * ```
+ */
 const chip = tv({
   slots: {
     base: [

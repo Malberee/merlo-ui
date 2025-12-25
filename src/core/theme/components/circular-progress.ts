@@ -2,6 +2,25 @@ import type { VariantProps } from 'tailwind-variants'
 
 import { tv } from '../utils/tv'
 
+/**
+ * CircularProgress **Tailwind Variants** component
+ *
+ * @example
+ * ```js
+ * const { base, svgWrapper, svg, indicator, value, label } = circularProgress({...})
+ *
+ * <View className={base()}>
+ *   <View className={svgWrapper()}>
+ *      <Svg className={svg()}>
+ *        <Circle className={track()} />
+ *        <Circle className={indicator()} />
+ *      </Svg>
+ *      <Text className={value()}>{value}</Text>
+ *   </View>
+ *    <Text className={label()}>{label}</Text>
+ * </View>
+ * ```
+ */
 const circularProgress = tv({
   slots: {
     base: 'flex max-w-fit flex-col items-center justify-center gap-1',

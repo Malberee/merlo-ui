@@ -2,6 +2,27 @@ import type { VariantProps } from 'tailwind-variants'
 
 import { tv } from '../utils/tv'
 
+/**
+ * Toggle (Switch) wrapper **Tailwind Variants** component
+ *
+ * const { base, wrapper, thumb, thumbIcon, label, startContent, endContent } = toggle({...})
+ *
+ * @example
+ * ```js
+ * <Pressable
+ *    className={base())}
+ * >
+ *  <View className={wrapper()} aria-hidden="true">
+ *    <Svg className={startContent()}>...</Svg>
+ *    <View className={thumb()}>
+ *      <Svg className={thumbIcon()}>...</Svg>
+ *    </View>
+ *    <Svg className={endContent()}>...</Svg>
+ *  </View>
+ *  <Text className={label()}>Label</Text>
+ * </label>
+ * ```
+ */
 const toggle = tv({
   slots: {
     base: 'group relative flex-row items-center',

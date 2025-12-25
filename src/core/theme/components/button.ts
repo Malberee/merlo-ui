@@ -3,6 +3,21 @@ import type { VariantProps } from 'tailwind-variants'
 import { colorVariants } from '../utils'
 import { tv } from '../utils/tv'
 
+/**
+ * Button wrapper **Tailwind Variants** component
+ *
+ * @example
+ * ```js
+ * const { base, content } = button({...})
+ *
+ * <Pressable
+ *  className={base()}
+ * >
+ *   <Text className={content()}>Button</Te>
+ * </Pressable>
+ * ```
+ */
+
 const button = tv({
   slots: {
     base: [

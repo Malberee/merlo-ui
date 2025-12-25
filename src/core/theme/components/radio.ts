@@ -2,6 +2,26 @@ import type { VariantProps } from 'tailwind-variants'
 
 import { tv } from '../utils/tv'
 
+/**
+ * Radio wrapper **Tailwind Variants** component
+ *
+ * @example
+ * ```js
+ * const { base, wrapper, point, labelWrapper, label, description } = radio({...})
+ *
+ * <Pressable
+ *    className={base())}
+ * >
+ *  <View className={wrapper()}>
+ *     <View className={point()}/>
+ *  </View>
+ *  <View className={labelWrapper()}>
+ *    <Text className={label()}>Label</Text>
+ *    <Text className={description()}>Description</Text>
+ *  </View>
+ * </Pressable>
+ * ```
+ */
 const radio = tv({
   slots: {
     base: 'group flex-row items-center justify-start',
