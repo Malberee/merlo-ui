@@ -1,6 +1,6 @@
 {
   "name": "merlo-ui",
-  "version": "1.1.15",
+  "version": "1.2.0",
   "description": "Beautiful React Native UI library",
   "main": "./lib/module/index.js",
   "types": "./lib/module/index.d.ts",
