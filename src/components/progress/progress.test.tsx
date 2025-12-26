@@ -69,7 +69,7 @@ describe('Progress', () => {
     expect(value?.props['aria-valuenow']).toBe(0)
   })
 
-  it('should ignore a value under the minimum', () => {
+  it('should ignore a value under the maximum', () => {
     render(<Progress aria-label="progress" testID="progress" value={101} />)
 
     const value = screen.queryByTestId('progress')
